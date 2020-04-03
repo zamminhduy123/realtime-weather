@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App - JavaScript</title>
+    <link rel="stylesheet" href="./src/font/Rimouski.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="app-title">
+            <p>Current Weather</p>
+        </div>
+        <div class="notification"></div>
+        <div class="weather-container">
+            <div class="weather-icon">
+                <img id ="icon" src="./src/icons/unknown.png" alt=""/>
+            </div>
+            <div class="temperature-value">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="temperature-description">
+                <p> - </p>
+            </div>
+            <div class="location">
+                <p>-</p>
+            </div>
+        </div>
+        <div class = "user-input-info">
+            <p>See weather from other places</p>
+            <form id = 'user-input-form' onsubmit="getWeatherToNation();return false">
+                <span><p>Country</p></span>
+                <input id = 'country' type = 'text' placeholder = 'Country (no shorten)' autocomplete="off">
+                <span><p>City</p></span>
+                <input id = 'city' type = 'text' placeholder = 'City (no shorten)' autocomplete="off">
+                <input class = 'btn' id = 'form-submit' type = 'submit' value = 'Submit'>
+            </form>
+        </div>
+        <div>
+            <span><p>Click here to see all day forcast</p></span>
+            <button id = 'day-forcast-btn' class = 'btn'><a href = './DayFocast.html'>Day Forcast</a></button>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="web.js"></script>
+</body>
+</html>
+
+
